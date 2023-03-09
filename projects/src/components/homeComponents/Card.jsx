@@ -1,17 +1,18 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 function Card(props) {
   //[]{id, image, creditsText}
   return (
-    <CardContainer>
+    <CardContainer to={`/recipe/${props.id}`}>
       <Img src={props.ele.image} alt="" />
       <Title>{props.ele.title}</Title>
       <Gradient></Gradient>
     </CardContainer>
   );
 }
-const CardContainer = styled.div`
+const CardContainer = styled(NavLink)`
   position: relative;
   overflow: hidden;
   border-radius: 1rem;

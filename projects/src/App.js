@@ -8,6 +8,7 @@ import RecipeScreen from "./pages/RecipeScreen";
 import CuisineScreen from "./pages/CuisineScreen";
 import { GiFoodTruck } from "react-icons/gi";
 import styled from "styled-components";
+import SearchedScreen from "./pages/SearchedScreen";
 
 function App() {
   return (
@@ -19,9 +20,11 @@ function App() {
         <Categories />
         <Routes>
           <Route path="/" element={<HomeScreen />} />
+          <Route path="*" element={<NotFoundScreen />} />
           <Route path="/recipe/:id" element={<RecipeScreen />} />
           <Route path="/cuisine/:name" element={<CuisineScreen />} />
-          <Route path="*" element={<NotFoundScreen />} />
+          <Route path="/search/:word" element={<SearchedScreen />} />
+
         </Routes>
       </BrowserRouter>
     </div>

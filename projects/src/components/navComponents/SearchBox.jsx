@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function SearchBox() {
+  const [input, setinput] = useState([]);
+  const navigate = useNavigate();
+  const handelSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/search/${input}`);
+
+    // go to searedScreen with word
+  };
   return (
     <div>
-      <FromStyle action="">
+      <FromStyle action="" onSubmit={handelSubmit}>
         <div>
           <FaSearch />
-          <input type="text" />
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setinput(e.target.value)}
+          />
         </div>
       </FromStyle>
     </div>
