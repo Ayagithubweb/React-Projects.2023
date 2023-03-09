@@ -4,4 +4,7 @@
   - Ecommerce App 🛒...
 - ## 🐾 Steps
   - ### Backend 🔐
-    _ #### Add Server + Add FackData
+    - #### Add Server + Add FackData
+  - ### Frontend 💻
+    - #### Show Data at homePage_error 😥
+
